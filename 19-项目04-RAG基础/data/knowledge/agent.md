@@ -1,0 +1,6 @@
+# Agent基础
+
+Agent可以根据用户任务判断是否需要调用Tool。
+Function Calling的基本流程是：模型提出function_call，Python执行工具，再返回function_call_output。
+Agent Loop会重复调用模型和工具，直到模型生成最终回答或达到最大执行步数。
+RAG会先从知识库检索相关内容，再把检索结果作为上下文提供给LLM。
