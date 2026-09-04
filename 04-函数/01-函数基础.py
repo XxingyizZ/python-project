@@ -36,3 +36,16 @@
 
 # Python使用缩进表示函数体，不需要像C语言一样使用大括号。
 # Python函数也不需要像C语言一样提前声明返回值类型。
+
+# 函数也可以保存到变量中，或者放进字典中统一管理。
+# 这也是后面把Python函数注册成Tool时的重要基础。
+# def hello():
+#     print("hello")
+#
+# func = hello
+# func()
+#
+# tools = {"hello": hello}
+# tools["hello"]()
+
+# 这里先理解“函数可以作为对象使用”，暂时不学习复杂的框架或设计模式。

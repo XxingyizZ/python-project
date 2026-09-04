@@ -1,6 +1,7 @@
 # 23-最终项目：个人学习 Agent
 
 这是 Python → LLM → Agent 学习路线的最终综合项目：一个可以对话、查询学习知识、记住有限用户信息并执行安全计算的个人学习助手。
+本项目在 Project 22 的 Agent + RAG + Memory 基础上，增加可选的 MCP Client；MCP 未安装时，核心功能仍然使用本地 Function Tool。
 
 ## 一、完整架构
 
@@ -81,6 +82,8 @@ python main.py
 Memory 保存用户长期状态（姓名、学习目标）和有限的对话历史；RAG 读取 `data/knowledge/`，切分文档、生成 Embedding、计算余弦相似度并返回 Top-K 的 `source/text/score`。Memory 不等于 RAG，`previous_response_id` 也不等于持久化 Memory。
 
 RAG 被注册为 Tool，Agent 需要知识时调用 `search_knowledge`，而不是让 Agent 偷偷直接访问 RAG 模块。
+
+Conversation History、Memory、RAG 和 Tool 的边界是：History记录最近对话，Memory保存长期状态，RAG检索外部知识，Tool执行当前动作。
 
 ## 六、MCP 可选扩展
 

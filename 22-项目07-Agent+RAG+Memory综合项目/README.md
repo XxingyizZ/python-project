@@ -3,6 +3,7 @@
 ## 一、项目目标
 
 本项目把前面学过的 LLM、Function Tool、Agent Loop、RAG、Memory、JSON 和文件操作组合起来，完成一个可以运行的学习助手。
+它不是重新学习这些概念，而是组合 Project 17、19 和 20 已经建立的机制。
 
 ```text
 用户问题
